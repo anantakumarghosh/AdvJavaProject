@@ -2,12 +2,10 @@
   Created by IntelliJ IDEA.
   User: zack
   Date: 14/07/22
-  Time: 7:02 PM
+  Time: 8:52 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<% pageContext.setAttribute("page", request.getParameter("page")); %>
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -23,16 +21,13 @@
 
         <div class="navbar-collapse collapse in" id="bs-example-navbar-collapse-1" aria-expanded="true">
             <ul class="nav navbar-nav">
-                <li><a href="#">About Project</a></li>
+                <li><a href="#">Add Question</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
+
             <ul class="nav navbar-nav navbar-right">
-                <li <c:out value="${(page == 'signup') ? 'class=active' : ''}"/>>
-                    <a href="Signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
-                </li>
-                <li <c:out value="${(page == 'login') ? 'class=active' : ''}"/>>
-                    <a href="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a>
-                </li>
+                <li><a style="color: #FFF;font-size: 1.3em;">Hello, {{ User Name }}</a></li>
+                <li><a href="Logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
             </ul>
         </div>
     </div>
